@@ -1,9 +1,4 @@
-<h1 align="center">Juan David Herrera</h1>
-
-<p align="center">
-  Software Engineering @ University of Miami · B.S. May 2028<br>
-  <sub>I build AI systems that run against real constraints — a client's existing hardware,<br>a regulator's rulebook, someone's actual workflow — rather than demos.</sub>
-</p>
+<img src="assets/header.svg" width="100%" alt="Juan David Herrera · Software Engineering @ University of Miami · B.S. May 2028">
 
 <p align="center">
   <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++">
@@ -20,101 +15,129 @@
   <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker">
 </p>
 
----
-
-### In production
-
-**An AI video analytics layer over a 37-camera security deployment**, and a cattle
-operations platform running a working feedlot in Colombia. Now building a booking and
-payments platform for a medical practice.
-
----
-
-### Public work
+### What I can do
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="33%" valign="top">
 
-#### [Sellix AI](https://github.com/jherrerae16/Sellix-AI) · [live demo](https://sellix-ai-mvp.vercel.app)
-`Next.js · TypeScript · Redis · Gemini · Twilio`
-
-Turns pharmacy point-of-sale data into commercial decisions: RFM
-segmentation, churn flagging, refill prediction, cross-sell.
-
-Two-way WhatsApp inbox over Twilio, and a prescription photographed
-by a customer comes back priced. **23,500 lines** across 18 API
-routes and 13 pages.
+**LLM products**<br>
+<sub>Claude and Gemini inside real workflows: clinical drafts a doctor signs, a WhatsApp agent that sells.</sub>
 
 </td>
-<td width="50%" valign="top">
+<td width="33%" valign="top">
 
-#### Interested in
-`Backend · Distributed systems · Applied AI`
+**Computer vision**<br>
+<sub>Detection on a club's existing cameras; prescription photos read and priced.</sub>
 
-Systems where correctness is measurable and the constraints are
-someone else's: existing hardware, a regulator's rulebook, a
-budget that will not move.
+</td>
+<td width="33%" valign="top">
 
-Looking for a **Summer 2027 software engineering internship**.
+**Full-stack products**<br>
+<sub>Next.js, FastAPI and PostgreSQL apps people use every day, from a farm to a medical practice.</sub>
+
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+
+**Payments and messaging**<br>
+<sub>PayPal, Google Meet, Twilio and WhatsApp wired into one flow that runs on its own.</sub>
+
+</td>
+<td width="33%" valign="top">
+
+**Data and analytics**<br>
+<sub>Churn and refill prediction, weight gain and money per lot, key-person risk.</sub>
+
+</td>
+<td width="33%" valign="top">
+
+**AI-built software, done carefully**<br>
+<sub>My own harness: mockups first, review by a different agent, test output on record.</sub>
 
 </td>
 </tr>
 </table>
 
----
+### Selected work
 
-### Client and private work
+<table>
+<tr>
+<td width="50%" valign="top">
 
-These stay private. Happy to walk through the architecture and the decisions in a conversation.
+#### AnestIA <img src="https://img.shields.io/badge/Healthcare-cf222e?style=flat-square" alt="Healthcare"> <sub>private · client</sub>
+`TypeScript · pgvector · Claude API`
 
-**VigilancIA** — AI video analytics over 37 existing security cameras at a residential club,
-now in production on site. I built the rules and precedence engine that resolves the effective
-configuration for every detection across a six-level hierarchy, the detection node and the
-operator console. The site server has no discrete GPU, so the first rollout covers the 10
-critical cameras on the existing Intel hardware, with the vision adapter behind an interface
-so a GPU can drop in later. Along the way I found that 22 of the cameras depended on a single
-recorder capped at 16 concurrent clients, and designed an RTSP distribution gateway around it.
-Live test on real cameras: 0.7 s median latency.
-<br><sub>`Python · YOLOX · FastAPI · PostgreSQL` — 35,000 lines, 237 test files</sub>
+Reads patient history and lab PDFs, drafts the pre-anesthesia document, and the
+anesthesiologist corrects and signs. Vision runs only on scans, about 80% cheaper.
 
-**SOFIA** — Cattle operations for a working feedlot in Colombia: weigh-ins, animal registry,
-paddock transfers, health events, gain-versus-threshold reporting, purchase and sale prices per
-kilo, expenses by month. In daily use on the farm. Every screen reads live database state per
-request rather than at build time — the failure mode that matters is the owner quietly stopping
-data entry.
-<br><sub>`Next.js 16 · TypeScript · Prisma · PostgreSQL` — 428 unit and 118 browser tests</sub>
+</td>
+<td width="50%" valign="top">
 
-**AnestIA** — Pre-anesthesia assessment: reads patient history and lab PDFs, drafts the
-clinical document, hands it to the anesthesiologist to correct and sign. The AI does the
-reconstruction; the clinical judgement stays with the physician, and nothing leaves
-unreviewed. PDF text extraction escalates to vision only for scans — ~80% cheaper than
-running vision on everything.
-<br><sub>`TypeScript · pgvector · Prisma · Claude API` — client work</sub>
+#### [Sellix AI](https://github.com/jherrerae16/Sellix-AI) <img src="https://img.shields.io/badge/Retail-1a7f37?style=flat-square" alt="Retail"> <sub>public · [live demo](https://sellix-ai-mvp.vercel.app)</sub>
+`Next.js · Redis · Gemini · Twilio`
 
-**Medical practice platform** — Booking and payments for international consultations: the
-patient gets a personal registration link, pays by PayPal on the same page, and a webhook
-books the Google Meet call and sends the WhatsApp confirmation. Built so the doctor and one
-assistant can run it without technical help.
-<br><sub>`Next.js · TypeScript · Prisma · PostgreSQL · PayPal` — 396 test files, client work</sub>
+Pharmacy sales data turned into decisions: churn, refills, cross-sell. A two-way
+WhatsApp inbox where a photographed prescription comes back priced.
 
-**JD²** — My own harness for building products with AI agents: a CLI that tracks phases,
-reopenable gates and handoffs, generates a read-only status page, and runs adversarial review
-and QA agents before anything is called done. Dogfooded on the medical practice platform.
-<br><sub>`JavaScript · Node` — v0.2.2</sub>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
-**Knowledge Intelligence** — Organizational knowledge map: who actually knows what, and what
-breaks when they leave. Measures key-person concentration risk and supports technical
-succession planning on an append-only audit trail.
-<br><sub>`TypeScript · Python · PostgreSQL` — built under the AI-DLC methodology, paused</sub>
+#### SOFIA <img src="https://img.shields.io/badge/Agriculture-9a6700?style=flat-square" alt="Agriculture"> <sub>private · in production</sub>
+`Next.js 16 · Prisma · PostgreSQL`
 
-**BANKO** — Personal-finance platform for people living between Colombia and the US:
-multi-bank, multi-currency aggregation with Claude-powered categorization.
-<br><sub>`FastAPI · SQLAlchemy async · Celery · PostgreSQL · Redis · Docker` — paused</sub>
+Runs a working feedlot in Colombia: weigh-ins, paddocks, health events, purchase
+and sale prices per kilo. Used every day on the farm. 428 unit and 118 browser tests.
+
+</td>
+<td width="50%" valign="top">
+
+#### Medical practice platform <img src="https://img.shields.io/badge/Healthcare-cf222e?style=flat-square" alt="Healthcare"> <sub>private · client</sub>
+`Next.js · Prisma · PostgreSQL · PayPal`
+
+International consultations end to end: the patient registers from a personal link,
+pays by PayPal, and the Google Meet and WhatsApp confirmation go out on their own.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+#### VigilancIA <img src="https://img.shields.io/badge/Security-0969da?style=flat-square" alt="Security"> <sub>private · in production</sub>
+`Python · YOLOX · FastAPI · PostgreSQL`
+
+AI video analytics over a residential club's 37 existing cameras, running on the
+site's own hardware. 0.7 s median latency in the live test.
+
+</td>
+<td width="50%" valign="top">
+
+#### JD² <img src="https://img.shields.io/badge/Dev_tooling-59636e?style=flat-square" alt="Dev tooling"> <sub>private</sub>
+`JavaScript · Node · 189 tests`
+
+My harness for building software with AI agents: reopenable gates, review by an
+agent that did not write the code, and test output on record before anything ships.
+
+</td>
+</tr>
+</table>
+
+Also: **Knowledge Intelligence**, key-person risk for a tech company, and **BANKO**, personal finance
+across Colombia and the US. Both private and paused. Happy to walk through any private project in a conversation.
+
+### How I build
+
+- Screens are approved as mockups before code is written.
+- An agent that did not write the change reviews it.
+- "Tests pass" means the command, its output and the exit code are on record.
 
 ---
 
 <p align="center">
+  Looking for a <b>Summer 2027 software engineering internship</b> · Backend · Applied AI · Distributed systems<br>
   <a href="https://www.linkedin.com/in/juanherrera-dev/">LinkedIn</a> ·
   <a href="mailto:jdh272@miami.edu">jdh272@miami.edu</a> ·
   Coral Gables, FL

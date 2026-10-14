@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 210" width="860" height="210" role="img" aria-label="Juan David Herrera, Software Engineering at University of Miami">
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    @keyframes ph { 0% { opacity: 1 } 15.5% { opacity: 1 } 16.67% { opacity: 0 } 100% { opacity: 0 } }
+    @keyframes type { 0% { transform: translateX(0) } 40% { transform: translateX(470px) } 100% { transform: translateX(470px) } }
+    @keyframes blink { 0%, 49% { opacity: 1 } 50%, 100% { opacity: 0 } }
+    .ph { opacity: 0; animation: ph 18s infinite; }
+    .ph1 { opacity: 1; }
+    .ph2 { animation-delay: 3s } .ph3 { animation-delay: 6s } .ph4 { animation-delay: 9s } .ph5 { animation-delay: 12s } .ph6 { animation-delay: 15s }
+    .cover { animation: type 3s steps(32) infinite; }
+    .caret { animation: blink 1s infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .ph, .cover, .caret { animation: none; }
+      .cover { transform: translateX(470px); }
+    }
+  </style>
+  <rect width="860" height="210" fill="#ffffff"/>
+  <text x="0" y="52" font-size="40" font-weight="700" fill="#1f2328">Juan David Herrera</text>
+  <text x="2" y="82" font-size="16" fill="#59636e">Software Engineering @ University of Miami · B.S. May 2028</text>
+  <text x="2" y="134" font-size="22" font-weight="600" fill="#1f2328">I build</text>
+  <g font-size="22" font-weight="600" fill="#0969da">
+    <text class="ph ph1" x="84" y="134">clinical drafts a doctor signs</text>
+    <text class="ph ph2" x="84" y="134">WhatsApp sales agents for pharmacies</text>
+    <text class="ph ph3" x="84" y="134">operations software for a cattle farm</text>
+    <text class="ph ph4" x="84" y="134">booking and payments for a clinic</text>
+    <text class="ph ph5" x="84" y="134">computer vision on existing cameras</text>
+    <text class="ph ph6" x="84" y="134">my own harness for AI-built software</text>
+  </g>
+  <g class="cover"><rect class="caret" x="82" y="112" width="2.5" height="28" fill="#0969da"/><rect x="86" y="108" width="480" height="36" fill="#ffffff"/></g>
+  <text class="mono" x="2" y="178" font-size="12" fill="#59636e">Healthcare · Retail pharmacy · Agriculture · Security · Personal finance · Enterprise</text>
+  <g text-anchor="end">
+    <text x="858" y="50" font-size="30" font-weight="700" fill="#1f2328">8</text>
+    <text x="858" y="68" font-size="12" fill="#59636e">products shipped or in build</text>
+    <text x="858" y="112" font-size="30" font-weight="700" fill="#1f2328">6</text>
+    <text x="858" y="130" font-size="12" fill="#59636e">industries</text>
+    <text x="858" y="174" font-size="30" font-weight="700" fill="#1f2328">2</text>
+    <text x="858" y="192" font-size="12" fill="#59636e">systems in production</text>
+  </g>
+  <line x1="0" y1="205" x2="860" y2="205" stroke="#d1d9e0" stroke-width="1"/>
+</svg>
