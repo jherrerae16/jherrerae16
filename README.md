@@ -30,41 +30,9 @@ payments platform for a medical practice.
 
 ---
 
-### Open work
+### Public work
 
 <table>
-<tr>
-<td width="50%" valign="top">
-
-#### [SOFIA](https://github.com/jherrerae16/sofia)
-`Next.js 16 · TypeScript · Prisma · PostgreSQL`
-
-Cattle operations for a Colombian feedlot: weigh-ins, animal
-registry, paddock transfers, health events, gain-versus-threshold
-reporting, purchase and sale prices per kilo, expenses by month.
-
-In daily use on the farm. Every screen reads live database state
-per request rather than at build time — the failure mode that
-matters is the owner quietly stopping data entry. **428 unit and
-118 browser tests** across Vitest and Playwright.
-
-</td>
-<td width="50%" valign="top">
-
-#### [AnestIA](https://github.com/jherrerae16/AnestIA)
-`TypeScript · pgvector · Prisma · Claude API`
-
-Pre-anesthesia assessment: reads patient history and lab PDFs,
-drafts the clinical document, hands it to the anesthesiologist
-to correct and sign.
-
-The AI does the reconstruction; the clinical judgement stays with
-the physician, and nothing leaves unreviewed. PDF text extraction
-escalates to vision only for scans — **~80% cheaper** than running
-vision on everything.
-
-</td>
-</tr>
 <tr>
 <td width="50%" valign="top">
 
@@ -96,7 +64,7 @@ Looking for a **Summer 2027 software engineering internship**.
 
 ---
 
-### Client and in-progress work
+### Client and private work
 
 These stay private. Happy to walk through the architecture and the decisions in a conversation.
 
@@ -109,6 +77,20 @@ so a GPU can drop in later. Along the way I found that 22 of the cameras depende
 recorder capped at 16 concurrent clients, and designed an RTSP distribution gateway around it.
 Live test on real cameras: 0.7 s median latency.
 <br><sub>`Python · YOLOX · FastAPI · PostgreSQL` — 35,000 lines, 237 test files</sub>
+
+**SOFIA** — Cattle operations for a working feedlot in Colombia: weigh-ins, animal registry,
+paddock transfers, health events, gain-versus-threshold reporting, purchase and sale prices per
+kilo, expenses by month. In daily use on the farm. Every screen reads live database state per
+request rather than at build time — the failure mode that matters is the owner quietly stopping
+data entry.
+<br><sub>`Next.js 16 · TypeScript · Prisma · PostgreSQL` — 428 unit and 118 browser tests</sub>
+
+**AnestIA** — Pre-anesthesia assessment: reads patient history and lab PDFs, drafts the
+clinical document, hands it to the anesthesiologist to correct and sign. The AI does the
+reconstruction; the clinical judgement stays with the physician, and nothing leaves
+unreviewed. PDF text extraction escalates to vision only for scans — ~80% cheaper than
+running vision on everything.
+<br><sub>`TypeScript · pgvector · Prisma · Claude API` — client work</sub>
 
 **Medical practice platform** — Booking and payments for international consultations: the
 patient gets a personal registration link, pays by PayPal on the same page, and a webhook
