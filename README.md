@@ -22,10 +22,11 @@
 
 ---
 
-### Currently building
+### In production
 
 **An AI video analytics layer over a 37-camera security deployment**, and a cattle
-operations platform running a working feedlot in Colombia.
+operations platform running a working feedlot in Colombia. Now building a booking and
+payments platform for a medical practice.
 
 ---
 
@@ -40,12 +41,12 @@ operations platform running a working feedlot in Colombia.
 
 Cattle operations for a Colombian feedlot: weigh-ins, animal
 registry, paddock transfers, health events, gain-versus-threshold
-reporting.
+reporting, purchase and sale prices per kilo, expenses by month.
 
-Every screen reads live database state per request rather than at
-build time — the failure mode that matters is the owner quietly
-stopping data entry. **45 test files** across Vitest integration
-tests and Playwright end-to-end flows.
+In daily use on the farm. Every screen reads live database state
+per request rather than at build time — the failure mode that
+matters is the owner quietly stopping data entry. **428 unit and
+118 browser tests** across Vitest and Playwright.
 
 </td>
 <td width="50%" valign="top">
@@ -99,18 +100,31 @@ Looking for a **Summer 2027 software engineering internship**.
 
 These stay private. Happy to walk through the architecture and the decisions in a conversation.
 
-**VigilancIA** — AI video analytics over 37 existing security cameras at a residential club.
-I built the rules and precedence engine that resolves the effective configuration for every
-detection across a six-level hierarchy, and designed the vision pipeline: batched inference on
-one on-site GPU node, decoupled from the rules engine by an event bus. Along the way I found
-that 22 of the cameras depended on a single recorder capped at 16 concurrent clients, and
-designed an RTSP distribution gateway around it.
-<br><sub>`Python · YOLOX · Kafka · PostgreSQL` — 4,800 lines, 67 test files</sub>
+**VigilancIA** — AI video analytics over 37 existing security cameras at a residential club,
+now in production on site. I built the rules and precedence engine that resolves the effective
+configuration for every detection across a six-level hierarchy, the detection node and the
+operator console. The site server has no discrete GPU, so the first rollout covers the 10
+critical cameras on the existing Intel hardware, with the vision adapter behind an interface
+so a GPU can drop in later. Along the way I found that 22 of the cameras depended on a single
+recorder capped at 16 concurrent clients, and designed an RTSP distribution gateway around it.
+Live test on real cameras: 0.7 s median latency.
+<br><sub>`Python · YOLOX · FastAPI · PostgreSQL` — 35,000 lines, 237 test files</sub>
+
+**Medical practice platform** — Booking and payments for international consultations: the
+patient gets a personal registration link, pays by PayPal on the same page, and a webhook
+books the Google Meet call and sends the WhatsApp confirmation. Built so the doctor and one
+assistant can run it without technical help.
+<br><sub>`Next.js · TypeScript · Prisma · PostgreSQL · PayPal` — 396 test files, client work</sub>
+
+**JD²** — My own harness for building products with AI agents: a CLI that tracks phases,
+reopenable gates and handoffs, generates a read-only status page, and runs adversarial review
+and QA agents before anything is called done. Dogfooded on the medical practice platform.
+<br><sub>`JavaScript · Node` — v0.2.2</sub>
 
 **Knowledge Intelligence** — Organizational knowledge map: who actually knows what, and what
 breaks when they leave. Measures key-person concentration risk and supports technical
 succession planning on an append-only audit trail.
-<br><sub>`TypeScript · Python · PostgreSQL` — built under the AI-DLC methodology</sub>
+<br><sub>`TypeScript · Python · PostgreSQL` — built under the AI-DLC methodology, paused</sub>
 
 **BANKO** — Personal-finance platform for people living between Colombia and the US:
 multi-bank, multi-currency aggregation with Claude-powered categorization.
