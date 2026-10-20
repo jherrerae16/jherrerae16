@@ -28,7 +28,7 @@
 <td width="33%" valign="top">
 
 **Computer vision**<br>
-<sub>Detection on a club's existing cameras; prescription photos read and priced.</sub>
+<sub>People and vehicle detection on the cameras a site already has; prescription photos read and priced.</sub>
 
 </td>
 <td width="33%" valign="top">
@@ -62,6 +62,81 @@
 
 ### Selected work
 
+<sub>The code of these three is private. The screens below are the real apps running on sample data.</sub>
+
+#### VigilancIA <img src="https://img.shields.io/badge/Security-0969da?style=flat-square" alt="Security"> <sub>private · in production</sub>
+`Python · YOLOX · FastAPI · PostgreSQL`
+
+AI for security cameras. It adds people and vehicle detection to the cameras a site already has,
+runs on local hardware so no video leaves the site, and puts every alert in one queue with its photo
+and the reason it fired. 0.7 s median latency from camera to alert in the live test.
+
+<img src="assets/vigilancia/queue.png" width="100%" alt="VigilancIA operator queue: six open alerts by severity, the shift timeline, and a critical vehicle alert open with its detection photo">
+
+<table>
+<tr>
+<td align="center"><img src="assets/vigilancia/alert.gif" width="250" alt="A new critical alert arrives during the shift"><br><sub>A new alert arrives without taking over the screen</sub></td>
+<td align="center"><img src="assets/vigilancia/incident.gif" width="250" alt="Opening an incident and confirming it"><br><sub>Open an incident, check the photo, confirm it</sub></td>
+<td align="center"><img src="assets/vigilancia/rules.gif" width="250" alt="Changing a camera rule with a required reason"><br><sub>Rules per camera, every change with a reason</sub></td>
+</tr>
+</table>
+
+<details>
+<summary>More screens</summary>
+<br>
+<img src="assets/vigilancia/live.png" width="49%" alt="Live view of nearby cameras"> <img src="assets/vigilancia/queue-dark.png" width="49%" alt="The queue in dark theme">
+<img src="assets/vigilancia/rules.png" width="49%" alt="Rules screen with change history">
+</details>
+
+#### SOFIA <img src="https://img.shields.io/badge/Agriculture-9a6700?style=flat-square" alt="Agriculture"> <sub>private · in production</sub>
+`Next.js 16 · Prisma · PostgreSQL`
+
+Runs a working cattle feedlot in Colombia: weigh-ins, paddocks, health events, purchase and sale
+prices per kilo. Used every day on the farm, mostly from a phone in the corral.
+428 unit and 118 browser tests.
+
+<img src="assets/sofia/cattle.png" width="75%" alt="SOFIA cattle screen: lot gaining 783 g/day, one bar per steer against the 750 g/day target, and the weight curve"> <img src="assets/sofia/weigh-ins-phone.png" width="23%" alt="Recording weigh-ins on a phone">
+
+<table>
+<tr>
+<td align="center"><img src="assets/sofia/weigh.gif" width="250" alt="Typing weights with the gain shown live"><br><sub>Weigh a lot: the gain shows as you type</sub></td>
+<td align="center"><img src="assets/sofia/purchase.gif" width="250" alt="Registering a cattle purchase"><br><sub>Buy cattle: cost per kilo updates live</sub></td>
+<td align="center"><img src="assets/sofia/calendar.gif" width="250" alt="Farm calendar with week and month views"><br><sub>Calendar of health tasks and to-dos</sub></td>
+</tr>
+</table>
+
+<details>
+<summary>More screens</summary>
+<br>
+<img src="assets/sofia/home.png" width="49%" alt="Home: lots, week calendar, to-dos and money for the month"> <img src="assets/sofia/animal.png" width="49%" alt="One animal's weight against the target and its history">
+<img src="assets/sofia/paddocks.png" width="49%" alt="Paddocks">
+</details>
+
+#### Medical practice platform <img src="https://img.shields.io/badge/Healthcare-cf222e?style=flat-square" alt="Healthcare"> <sub>private · client</sub>
+`Next.js · Prisma · PostgreSQL · PayPal`
+
+International consultations end to end: the patient registers from a personal link, picks a time,
+pays by PayPal, and the Google Meet link and WhatsApp confirmation go out on their own.
+
+<img src="assets/practice/schedule.png" width="75%" alt="Doctor's weekly schedule with 21 paid virtual consultations"> <img src="assets/practice/booking-phone.png" width="23%" alt="Patient picking a day and time on a phone">
+
+<table>
+<tr>
+<td align="center"><img src="assets/practice/register.gif" width="250" alt="Patient registering from a personal link"><br><sub>The patient registers from a personal link</sub></td>
+<td align="center"><img src="assets/practice/pay.gif" width="250" alt="Picking a time and reaching PayPal"><br><sub>Picks a time and pays with PayPal</sub></td>
+<td align="center"><img src="assets/practice/confirm.gif" width="250" alt="Paid appointment with Meet link and WhatsApp confirmation"><br><sub>Meet link and WhatsApp confirmation, ready</sub></td>
+</tr>
+</table>
+
+<details>
+<summary>More screens</summary>
+<br>
+<img src="assets/practice/today.png" width="49%" alt="Today: confirmations to send, payments, unfinished registrations"> <img src="assets/practice/appointment.png" width="49%" alt="Appointment panel: payment, video call, confirmation and history">
+<img src="assets/practice/patient.png" width="49%" alt="Patient record with timeline"> <img src="assets/practice/settings.png" width="49%" alt="Consultation price, length and hours">
+</details>
+
+#### More projects
+
 <table>
 <tr>
 <td width="50%" valign="top">
@@ -84,36 +159,7 @@ WhatsApp inbox where a photographed prescription comes back priced.
 </td>
 </tr>
 <tr>
-<td width="50%" valign="top">
-
-#### SOFIA <img src="https://img.shields.io/badge/Agriculture-9a6700?style=flat-square" alt="Agriculture"> <sub>private · in production</sub>
-`Next.js 16 · Prisma · PostgreSQL`
-
-Runs a working feedlot in Colombia: weigh-ins, paddocks, health events, purchase
-and sale prices per kilo. Used every day on the farm. 428 unit and 118 browser tests.
-
-</td>
-<td width="50%" valign="top">
-
-#### Medical practice platform <img src="https://img.shields.io/badge/Healthcare-cf222e?style=flat-square" alt="Healthcare"> <sub>private · client</sub>
-`Next.js · Prisma · PostgreSQL · PayPal`
-
-International consultations end to end: the patient registers from a personal link,
-pays by PayPal, and the Google Meet and WhatsApp confirmation go out on their own.
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-#### VigilancIA <img src="https://img.shields.io/badge/Security-0969da?style=flat-square" alt="Security"> <sub>private · in production</sub>
-`Python · YOLOX · FastAPI · PostgreSQL`
-
-AI video analytics over a residential club's 37 existing cameras, running on the
-site's own hardware. 0.7 s median latency in the live test.
-
-</td>
-<td width="50%" valign="top">
+<td colspan="2" valign="top">
 
 #### JD² <img src="https://img.shields.io/badge/Dev_tooling-59636e?style=flat-square" alt="Dev tooling"> <sub>private</sub>
 `JavaScript · Node · 189 tests`
