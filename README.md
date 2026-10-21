@@ -15,6 +15,10 @@
   <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker">
 </p>
 
+<p align="center">
+  <b>Software Engineering Intern</b> @ Informática y Tributos (Summer 2026) · <b>2nd place</b>, Pulse Miami Hackathon (2026)
+</p>
+
 ### What I can do
 
 <table>
@@ -93,7 +97,7 @@ and the reason it fired. 0.7 s median latency from camera to alert in the live t
 
 Runs a working cattle feedlot in Colombia: weigh-ins, paddocks, health events, purchase and sale
 prices per kilo. Used every day on the farm, mostly from a phone in the corral.
-428 unit and 118 browser tests.
+504 unit and 130 browser tests.
 
 <img src="assets/sofia/cattle.png" width="75%" alt="SOFIA cattle screen: lot gaining 783 g/day, one bar per steer against the 750 g/day target, and the weight curve"> <img src="assets/sofia/weigh-ins-phone.png" width="23%" alt="Recording weigh-ins on a phone">
 
