@@ -135,6 +135,30 @@ pays by PayPal, and the Google Meet link and WhatsApp confirmation go out on the
 <img src="assets/practice/patient.png" width="49%" alt="Patient record with timeline"> <img src="assets/practice/settings.png" width="49%" alt="Consultation price, length and hours">
 </details>
 
+#### X Pro Column Analyzer <img src="https://img.shields.io/badge/Government-8250df?style=flat-square" alt="Government"> <sub>private · client</sub>
+`Node · SQLite · Chrome extension · Claude API`
+
+Social listening for government press offices. A Chrome extension captures X Pro columns; the dashboard
+turns them into topics, sentiment, who amplifies whom, and a printable report for the press chief.
+An AI assistant answers with citations to the tweets it used. 1,305 tests.
+
+<img src="assets/xpro/pulse.png" width="100%" alt="X Pro Analyzer Pulse: tweets captured, relevant, noise and engagement, activity by hour and day, and a critical alert with its evidence tweets">
+
+<table>
+<tr>
+<td align="center"><img src="assets/xpro/topics.gif" width="250" alt="Topic map and conversation climate"><br><sub>Topic map and conversation climate</sub></td>
+<td align="center"><img src="assets/xpro/assistant.gif" width="250" alt="AI assistant answering with cited tweets"><br><sub>AI assistant that cites the tweets it used</sub></td>
+<td align="center"><img src="assets/xpro/summary.gif" width="250" alt="Weekly summary and printable press report"><br><sub>Weekly summary and the press report</sub></td>
+</tr>
+</table>
+
+<details>
+<summary>More screens</summary>
+<br>
+<img src="assets/xpro/press-room.png" width="49%" alt="Press room with executive advice"> <img src="assets/xpro/network.png" width="49%" alt="Coordination network: accounts posting the same text">
+<img src="assets/xpro/profile.png" width="49%" alt="Account profile with coordination signals"> <img src="assets/xpro/extension.png" width="20%" alt="Chrome extension popup after a capture">
+</details>
+
 #### More projects
 
 <table>
